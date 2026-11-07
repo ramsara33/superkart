@@ -1,0 +1,106 @@
+{
+  "selected_model": "Random Forest tuned",
+  "features": [
+    "Product_Weight",
+    "Product_Sugar_Content",
+    "Product_Allocated_Area",
+    "Product_MRP",
+    "Store_Size",
+    "Store_Location_City_Type",
+    "Store_Type",
+    "Product_Id_char",
+    "Store_Age_Years",
+    "Product_Type_Category"
+  ],
+  "numeric_features": [
+    "Product_Weight",
+    "Product_Allocated_Area",
+    "Product_MRP",
+    "Store_Age_Years"
+  ],
+  "reference_year": 2025,
+  "versions": {
+    "numpy": "2.3.5",
+    "pandas": "2.3.3",
+    "scikit-learn": "1.7.2",
+    "joblib": "1.5.2",
+    "matplotlib": "3.10.6",
+    "seaborn": "0.13.2",
+    "requests": "2.32.5",
+    "Flask": "3.1.2",
+    "streamlit": "1.51.0"
+  },
+  "training_rows": 6134,
+  "test_rows": 2629,
+  "selection": "training CV RMSE only",
+  "test_metrics": {
+    "RMSE": 279.6743115490963,
+    "MAE": 103.25531561915004,
+    "R2": 0.9298381563943725,
+    "Adjusted_R2_reference": 0.9292458461260211,
+    "MAPE_percent": 3.564911745051045
+  },
+  "model_sha256": "c5aad84c75ed1390eb13a09ab43bef251342f150d6733103259bba7e462e2045",
+  "training_ranges": {
+    "Product_Weight": {
+      "min": 4.0,
+      "max": 20.65
+    },
+    "Product_Allocated_Area": {
+      "min": 0.004,
+      "max": 0.297
+    },
+    "Product_MRP": {
+      "min": 31.0,
+      "max": 254.34
+    },
+    "Store_Age_Years": {
+      "min": 16.0,
+      "max": 38.0
+    }
+  },
+  "training_categories": {
+    "Product_Sugar_Content": [
+      "Low Sugar",
+      "No Sugar",
+      "Regular"
+    ],
+    "Store_Size": [
+      "High",
+      "Medium",
+      "Small"
+    ],
+    "Store_Location_City_Type": [
+      "Tier 1",
+      "Tier 2",
+      "Tier 3"
+    ],
+    "Store_Type": [
+      "Departmental Store",
+      "Food Mart",
+      "Supermarket Type1",
+      "Supermarket Type2"
+    ],
+    "Product_Id_char": [
+      "DR",
+      "FD",
+      "NC"
+    ],
+    "Product_Type_Category": [
+      "Non Perishables",
+      "Perishables"
+    ]
+  },
+  "source_manifest": [
+    {
+      "file": "SuperKart.csv",
+      "sha256": "b12ec41668e69d71d64ca96f2be78a011087f2a9cac6aba6e5cc920544b21ab2",
+      "bytes": 862264
+    },
+    {
+      "file": "Batch_Data_SuperKart.csv",
+      "sha256": "f78d85208a6b040c47efdf39bc32934642ca593bd79eee494787a0b8ee403ad0",
+      "bytes": 938
+    }
+  ]
+}
