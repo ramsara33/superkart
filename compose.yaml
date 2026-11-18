@@ -1,0 +1,23 @@
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "7860:7860"
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:7860/', timeout=5)"]
+      interval: 10s
+      timeout: 5s
+      retries: 6
+    networks: [superkart]
+  frontend:
+    build: ./frontend
+    ports:
+      - "8501:8501"
+    environment:
+      BACKEND_URL: http://backend:7860
+    depends_on:
+      backend:
+        condition: service_healthy
+    networks: [superkart]
+networks:
+  superkart:
